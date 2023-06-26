@@ -6,7 +6,9 @@
             <Courses />
             <BookStore />
             <Sponsors />
-            <Jumbotron />
+        </div>
+        <Jumbotron />
+        <div class="contain">
             <Blog />
         </div>
     </main>
