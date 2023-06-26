@@ -1,7 +1,6 @@
 <template>
     <main>
         <div class="contain">
-
             <DataNumbers />
             <AboutMe />
             <Courses />
