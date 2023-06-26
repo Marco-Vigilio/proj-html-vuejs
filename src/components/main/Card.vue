@@ -35,12 +35,12 @@ export default {
         priceNumber: String,
         priceNumberDecimal: String,
         image: String,
-        numLesson: String,
-        numStudents: String,
+        numLesson: Number,
+        numStudents: Number,
     },
     data() {
         return {
-
+            numDecimal: "",
         }
     },
     methods: {
@@ -86,6 +86,10 @@ export default {
 
         .footer {
             padding: 1.5rem 0;
+
+            span:last-child {
+                padding-left: 1.5rem;
+            }
         }
     }
 }
