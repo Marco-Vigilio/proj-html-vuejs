@@ -21,12 +21,6 @@ import BookStore from './main/BookStore.vue';
 import Sponsors from './main/Sponsors.vue';
 import Jumbotron from './main/Jumbotron.vue';
 import Blog from './main/Blog.vue';
-
-
-
-
-
-
 export default {
     components: {
         DataNumbers,
