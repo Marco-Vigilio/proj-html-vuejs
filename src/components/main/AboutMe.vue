@@ -1,6 +1,6 @@
 <template>
     <section>
-        <span>ABOUT ME</span>
+        <span class="section">ABOUT ME</span>
         <div class="introduction">
             <article>
                 <h2>How to Be an Alpha Male: The 15 Habits of True Alphas</h2>
@@ -16,8 +16,21 @@
             </article>
         </div>
         <div class="about">
-            <article class="video">Video</article>
-            <article>qualcosa</article>
+            <article class="video">
+                <img src="../../assets/img/home-movation-video-poster-670x450.jpg" alt="image video of Theme Move">
+                <img class="youtube_icon" src="../../assets/img/icon-youtube-play.png" alt="image icon Youtube">
+            </article>
+            <article class="cit">
+                <div>
+                    <h3>"Every morning you have two choices: continue to sleep with your dreams, or wake up and chase them."
+                    </h3>
+                </div>
+                <div>
+                    <img src="../../assets/img/home-movation-shape-01.png" alt="lazy">
+                    <span class="name">Kaixa Stark</span>
+                    <span>WINGMAN</span>
+                </div>
+            </article>
         </div>
     </section>
 </template>
@@ -28,7 +41,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-    span {
+    span.section {
         display: block;
         padding-bottom: 2.5rem;
     }
@@ -64,10 +77,57 @@ section {
 
     .about {
         display: flex;
+        padding: 3rem 0;
 
         article.video {
-            background-color: violet;
-            width: 60%;
+            position: relative;
+            display: flex;
+            width: 57%;
+
+            img {
+                width: 100%;
+                display: block;
+                border-radius: .4rem;
+            }
+
+            .youtube_icon {
+                position: absolute;
+                width: 90px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        article.cit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: calc(100% - 57%);
+            padding-left: 5rem;
+
+            :first-child {
+                h3 {
+                    font-size: 1.8rem;
+                    padding-bottom: 3rem;
+                    line-height: 3rem;
+                }
+            }
+
+            :last-child {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 30px;
+                }
+
+                span.name {
+                    font-size: 1.4rem;
+                    padding: 1.5rem 0rem 1rem;
+                    font-weight: bold;
+                }
+            }
         }
 
         //no margin, PADDING
