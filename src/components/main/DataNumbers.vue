@@ -1,9 +1,21 @@
 <template>
     <div class="numbers">
-        <div class="data">numeri</div>
-        <div class="data">numeri</div>
-        <div class="data">numeri</div>
-        <div class="data">numeri</div>
+        <div class="data">
+            <span>1.926</span>
+            <p>FINISHED SESSIONS</p>
+        </div>
+        <div class="data">
+            <span>100%</span>
+            <p>SATISFACTION RATE</p>
+        </div>
+        <div class="data">
+            <span>3092+</span>
+            <p>ENROLLED LEARNERS</p>
+        </div>
+        <div class="data">
+            <span>200</span>
+            <p>ONLINE INSTRUCTORS</p>
+        </div>
     </div>
 </template>
 <script>
@@ -15,13 +27,21 @@ export default {
 div.numbers {
     display: flex;
     justify-content: space-between;
+    background-image: url("../../assets/img/background-pattern-grid-line-06.png");
+    margin: 6rem 0;
 
     div.data {
         width: calc(100% / 4);
-        background-color: blue;
-        border: 2px solid black;
+        padding: 1rem;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+
+        span {
+            font-size: 2rem;
+            padding-bottom: .5rem;
+        }
     }
 }
 </style>
