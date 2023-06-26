@@ -53,6 +53,7 @@ export default {
         button {
             border: none;
             padding: 1rem 2rem;
+            border-radius: .3rem;
         }
     }
 

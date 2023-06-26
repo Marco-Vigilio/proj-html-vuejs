@@ -1,6 +1,9 @@
 <template>
     <section>
-        <div class="title">Titolo</div>
+        <div class="title">
+            <span>BEGIN YOUR JOURNEY AT MAXCOACH</span>
+            <h2>Latest Online Courses</h2>
+        </div>
         <div class="cards">
             <Card />
         </div>
@@ -21,6 +24,11 @@ export default {
 <style lang="scss" scoped>
 div.title {
     text-align: center;
+    padding-bottom: 2rem;
+
+    h2 {
+        font-size: 2.5rem;
+    }
 }
 
 .cards {
@@ -30,5 +38,8 @@ div.title {
 .button {
     display: flex;
     justify-content: center;
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: .3rem;
 }
 </style>
