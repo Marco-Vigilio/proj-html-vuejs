@@ -5,7 +5,7 @@
             <AboutMe />
             <Courses />
             <BookStore />
-            <Sponsor />
+            <Sponsors />
             <Jumbotron />
             <Blog />
         </div>
@@ -16,7 +16,7 @@ import AboutMe from './main/AboutMe.vue';
 import DataNumbers from './main/DataNumbers.vue';
 import Courses from './main/Courses.vue';
 import BookStore from './main/BookStore.vue';
-import Sponsor from './main/Sponsor.vue';
+import Sponsors from './main/Sponsors.vue';
 import Jumbotron from './main/Jumbotron.vue';
 import Blog from './main/Blog.vue';
 
@@ -31,7 +31,7 @@ export default {
         AboutMe,
         Courses,
         BookStore,
-        Sponsor,
+        Sponsors,
         Jumbotron,
         Blog,
     }
