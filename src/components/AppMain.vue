@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 main {
     div.contain {
-        max-width: 1180px;
+        max-width: 1170px;
         margin: 0 auto;
     }
 }

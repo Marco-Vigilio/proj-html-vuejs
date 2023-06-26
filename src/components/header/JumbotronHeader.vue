@@ -1,11 +1,18 @@
 <template>
     <div class="jumbotron">
-        <div class="spot">
-            qualcosa
-        </div>
-        <div class="my_image">
-            immagine
-        </div>
+        <section class="spot">
+            <div>
+                <span>I'm Wingman</span>
+                <h1>Peace On Earth A Wonderful Wish But No Way</h1>
+                <p>Success isn’t overnight. It’s when everyday you get a little better than the day before. It all adds up.
+                </p>
+                <button>Get Started For Free <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+        <section class="my_image">
+            <img class="wingman" src="../../assets/img/home-movation-hero-image.png" alt="image of Wingman">
+        </section>
+
     </div>
 </template>
 <script>
@@ -15,22 +22,54 @@ export default {
 </script>
 <style lang="scss" scoped>
 .jumbotron {
+    position: relative;
     display: flex;
-
-    div.my_image,
-    div.spot {
-        width: calc(100% / 2);
-        height: 300px;
-    }
+    padding-top: 3rem;
 
     .spot {
-        background-color: red;
-        border: 2px solid black;
+        width: 50%;
+        padding-right: 10rem;
+        display: flex;
+        align-items: center;
+
+        span {
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 3rem;
+            padding: 1.5rem 0;
+            vertical-align: 60%;
+            line-height: 4rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            padding-bottom: 1.5rem;
+            vertical-align: 60%;
+            line-height: 1.8rem;
+        }
+
+        button {
+            border: none;
+            padding: 1rem 2rem;
+        }
     }
 
     .my_image {
-        background-color: green;
-        border: 2px solid black;
+        width: 50%;
+        padding: 0 1.8rem;
+        padding-top: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .wingman {
+            z-index: 1;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
     }
 
 }

@@ -41,7 +41,7 @@ footer {
     background-color: rgb(72, 72, 72);
 
     div.contain {
-        max-width: 1180px;
+        max-width: 1170px;
         margin: 0 auto;
 
         .flex {
@@ -75,4 +75,5 @@ footer {
             text-align: center;
         }
     }
-}</style>
+}
+</style>
