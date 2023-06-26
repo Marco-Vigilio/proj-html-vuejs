@@ -6,7 +6,18 @@
                     logo
                 </div>
 
-                <div class="icons">
+                <div class="menu">
+                    <ul>
+                        <li>qualcosa</li>
+                        <li>qualcosa</li>
+                        <li>qualcosa</li>
+                        <li>qualcosa</li>
+                        <li>qualcosa</li>
+                        <li>qualcosa</li>
+                    </ul>
+                </div>
+
+                <div class="social">
                     <ul>
                         <li>icone</li>
                     </ul>
@@ -41,7 +52,18 @@ header {
             display: flex;
             justify-content: space-between;
 
-            .icons {
+            .menu {
+
+                ul {
+                    display: flex;
+
+                    li {
+                        margin: 0 1rem;
+                    }
+                }
+            }
+
+            .social {
                 background-color: violet;
                 display: flex;
                 justify-content: flex-end;
