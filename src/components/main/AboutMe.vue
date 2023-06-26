@@ -17,8 +17,10 @@
         </div>
         <div class="about">
             <article class="video">
-                <img src="../../assets/img/home-movation-video-poster-670x450.jpg" alt="image video of Theme Move">
-                <img class="youtube_icon" src="../../assets/img/icon-youtube-play.png" alt="image icon Youtube">
+                <a href="#">
+                    <img src="../../assets/img/home-movation-video-poster-670x450.jpg" alt="image video of Theme Move">
+                    <img class="youtube_icon" src="../../assets/img/icon-youtube-play.png" alt="image icon Youtube">
+                </a>
             </article>
             <article class="cit">
                 <div>
