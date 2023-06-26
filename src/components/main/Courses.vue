@@ -72,19 +72,22 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
+    padding: 6rem 0 3rem;
+
     div.title {
         text-align: center;
         padding-bottom: 2rem;
 
         h2 {
             font-size: 2.5rem;
+            padding: 2rem 0;
         }
     }
 
     .cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .button {

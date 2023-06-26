@@ -3,25 +3,27 @@
         <div class="header">
             <img :src="image" alt="image of couse">
         </div>
-        <div class="main">
-            <span>&dollar;{{ priceNumber }}</span>
-            <span>.{{ priceNumberDecimal }}</span>
-            <p>{{ name }}</p>
-        </div>
-        <div class="footer">
-            <span v-if="numLesson === '1'">
-                <i class="fa-regular fa-file-lines"></i>
-                {{ numLesson }} Lesson
-            </span>
-            <span v-else>
-                <i class="fa-regular fa-file-lines"></i>
-                {{ numLesson }} Lessons
-            </span>
+        <div class="contain">
+            <div class="main">
+                <span>&dollar;{{ priceNumber }}</span>
+                <span>.{{ priceNumberDecimal }}</span>
+                <p>{{ name }}</p>
+            </div>
+            <div class="footer">
+                <span v-if="numLesson === '1'">
+                    <i class="fa-regular fa-file-lines"></i>
+                    {{ numLesson }} Lesson
+                </span>
+                <span v-else>
+                    <i class="fa-regular fa-file-lines"></i>
+                    {{ numLesson }} Lessons
+                </span>
 
-            <span>
-                <i class="fa-regular fa-user"></i>
-                {{ numStudents }} Students
-            </span>
+                <span>
+                    <i class="fa-regular fa-user"></i>
+                    {{ numStudents }} Students
+                </span>
+            </div>
         </div>
     </div>
 </template>
@@ -55,14 +57,35 @@ export default {
 </script>
 <style lang="scss" scoped>
 .card {
-    width: (calc(100% / 3)-2);
-    border: 2px solid black;
+    width: (calc((100% - 4rem) / 3));
+    border-radius: .4rem;
+    overflow: hidden;
 
-    header {
-        width: 100%;
+    .contain {
+        padding: 1rem 2rem;
 
-        img {
+        .header {
             width: 100%;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .main {
+            span:first-child {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                padding: 1rem 0;
+            }
+        }
+
+        .footer {
+            padding: 1.5rem 0;
         }
     }
 }
