@@ -19,6 +19,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 header {
+    background-image: url("../assets/img/background-pattern-wavify.png");
     background-color: gold;
 
     div.contain {
