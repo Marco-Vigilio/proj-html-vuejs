@@ -23,7 +23,7 @@ header {
     background-color: gold;
 
     div.contain {
-        max-width: 1180px;
+        max-width: 1170px;
         margin: 0 auto;
     }
 

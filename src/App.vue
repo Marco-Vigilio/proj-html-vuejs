@@ -19,8 +19,6 @@ export default {
 </template>
 
 <style lang="scss">
-@import './style/generals.scss';
-
 * {
     margin: 0;
     padding: 0;
@@ -29,5 +27,10 @@ export default {
 
 ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 </style>
