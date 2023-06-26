@@ -1,43 +1,20 @@
 <template>
     <header>
         <div class="contain">
-            <nav>
-                <div class="image-logo">
-                    logo
-                </div>
-
-                <div class="menu">
-                    <ul>
-                        <li>qualcosa</li>
-                        <li>qualcosa</li>
-                        <li>qualcosa</li>
-                        <li>qualcosa</li>
-                        <li>qualcosa</li>
-                        <li>qualcosa</li>
-                    </ul>
-                </div>
-
-                <div class="social">
-                    <ul>
-                        <li>icone</li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="jumbotron">
-                <div class="spot">
-                    qualcosa
-                </div>
-                <div class="my_image">
-                    immagine
-                </div>
-            </div>
+            <NavHeader />
+            <JumbotronHeader />
         </div>
     </header>
 </template>
 <script>
+import NavHeader from './header/NavHeader.vue';
+import JumbotronHeader from './header/JumbotronHeader.vue';
 export default {
-
+    name: "Header",
+    components: {
+        NavHeader,
+        JumbotronHeader,
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -47,49 +24,6 @@ header {
     div.contain {
         max-width: 1180px;
         margin: 0 auto;
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-
-            .menu {
-
-                ul {
-                    display: flex;
-
-                    li {
-                        margin: 0 1rem;
-                    }
-                }
-            }
-
-            .social {
-                background-color: violet;
-                display: flex;
-                justify-content: flex-end;
-            }
-        }
-
-        .jumbotron {
-            display: flex;
-
-            div.my_image,
-            div.spot {
-                width: calc(100% / 2);
-                height: 300px;
-            }
-
-            .spot {
-                background-color: red;
-                border: 2px solid black;
-            }
-
-            .my_image {
-                background-color: green;
-                border: 2px solid black;
-            }
-
-        }
     }
 
 
