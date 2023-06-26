@@ -1,29 +1,51 @@
 <template>
-    <section>
-        <span>Titilino</span>
-        <h1>Titolo</h1>
-        <div class="items">
-            <div>Item</div>
-            <div>Item</div>
-            <div>Item</div>
-            <div>Item</div>
+    <div class="blog">
+        <div class="image">
+            <img :src="image" alt="image of work">
         </div>
-        <a href="#">Blogs</a>
-    </section>
+        <div class="info_blog">
+            <span><i class="fa-regular fa-calendar"></i> {{ data }}</span>
+            <p>{{ title }}</p>
+            <span>{{ description }}</span>
+        </div>
+    </div>
 </template>
 <script>
 export default {
-    name: "Blog",
+    props: {
+        image: String,
+        data: String,
+        title: String,
+        description: String,
+    },
 }
 </script>
 <style lang="scss" scoped>
-.items {
-    display: flex;
-    justify-content: space-between;
-}
+.blog {
+    width: (calc((100% - 4rem) / 4));
 
-a {
-    display: flex;
-    justify-content: center;
+    .image {
+        width: 100%;
+        border-radius: .6rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .info_blog {
+        padding: 1.5rem 0 2rem;
+
+        p {
+            font-size: 1.4rem;
+            padding: 1rem 0;
+            line-height: 2rem;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    }
 }
 </style>

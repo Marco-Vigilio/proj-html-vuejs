@@ -9,7 +9,7 @@
         </div>
         <Jumbotron />
         <div class="contain">
-            <Blog />
+            <Blogs />
         </div>
     </main>
 </template>
@@ -20,7 +20,7 @@ import Courses from './main/Courses.vue';
 import BookStore from './main/BookStore.vue';
 import Sponsors from './main/Sponsors.vue';
 import Jumbotron from './main/Jumbotron.vue';
-import Blog from './main/Blog.vue';
+import Blogs from './main/Blogs.vue';
 export default {
     components: {
         DataNumbers,
@@ -29,7 +29,7 @@ export default {
         BookStore,
         Sponsors,
         Jumbotron,
-        Blog,
+        Blogs,
     }
 }
 </script>
