@@ -4,26 +4,21 @@
             <div class="image-logo">
                 logo
             </div>
-            <div class="nav-bar">
-                <ul>
-                    <li>qualcosa</li>
-                    <li>qualcosa</li>
-                    <li>qualcosa</li>
-                    <li>qualcosa</li>
-                    <li>qualcosa</li>
-                    <li>qualcosa</li>
-                </ul>
-            </div>
 
-            <div class="social">
+            <div class="icons">
                 <ul>
-                    <li>Social</li>
+                    <li>icone</li>
                 </ul>
             </div>
         </nav>
 
         <div class="jumbotron contain">
-
+            <div class="spot">
+                qualcosa
+            </div>
+            <div class="my_image">
+                immagine
+            </div>
         </div>
 
     </header>
@@ -42,21 +37,36 @@ header {
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-    }
 
-    div.nav-bar {
-        ul {
+        .icons {
+            background-color: violet;
             display: flex;
-
-            li {
-                margin: 0 1rem;
-            }
+            justify-content: flex-end;
         }
     }
 
-    div.contain {
+    div .jumbotron,
+    .contain {
         max-width: 1180px;
         margin: 0 auto;
+        display: flex;
+
+        div.my_image,
+        div.spot {
+            width: calc(100% / 2);
+            height: 300px;
+        }
+
+        .spot {
+            background-color: red;
+            border: 2px solid black;
+        }
+
+        .my_image {
+            background-color: green;
+            border: 2px solid black;
+        }
+
     }
 }
 </style>
