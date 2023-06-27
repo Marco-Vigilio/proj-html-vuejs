@@ -1,13 +1,13 @@
 <template>
     <section>
         <span>BLOG UPDATED</span>
-        <h2>Interesting articles updated daily</h2>
+        <h2>Interesting <span class="green">articles updated</span> daily</h2>
         <div class="blogs">
             <Blog v-for="blog in arrayBlog" :image=blog.image :data=blog.data :title=blog.title
                 :description="blog.description" />
         </div>
         <div class="link">
-            <a href="#">VIEW ALL POSTS</a>
+            <a href="#" class="green">VIEW ALL POSTS</a>
         </div>
 
     </section>
@@ -52,6 +52,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
+.green {
+    color: $green;
+}
+
 section {
     padding: 4rem 0;
 
@@ -74,10 +80,11 @@ section {
     align-items: center;
 
     a {
-        border: 2px solid transparent;
+        border-bottom: 2px solid $green;
 
         &:hover {
             border-bottom: 2px solid black;
+            color: black
         }
     }
 }

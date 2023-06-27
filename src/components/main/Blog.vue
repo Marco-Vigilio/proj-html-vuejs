@@ -21,6 +21,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
 .blog {
     width: (calc((100% - 4rem) / 4));
 
@@ -41,6 +43,25 @@ export default {
             font-size: 1.4rem;
             padding: 1rem 0;
             line-height: 2rem;
+            color: black;
+
+
+            &:hover {
+                animation-name: slow;
+                animation-duration: .3s;
+                animation-fill-mode: forwards;
+
+                @keyframes slow {
+                    0% {
+                        color: black;
+                    }
+
+                    100% {
+                        color: $green;
+                        ;
+                    }
+                }
+            }
         }
 
         span {
