@@ -5,7 +5,7 @@
                 <Contact :objectAddress="objectContact" />
                 <Widget :arrayList="arrayWidget" />
             </div>
-            <p>Copywrite</p>
+            <p>© 2020 Maxcoach. All Rights Reserved</p>
         </div>
     </footer>
 </template>
@@ -55,9 +55,9 @@ footer {
 
         .flex {
             display: flex;
+            padding: 3rem 0 4rem;
 
             section {
-                background-color: red;
                 width: calc(100% / 2);
                 display: flex;
             }
@@ -65,6 +65,7 @@ footer {
 
         p {
             text-align: center;
+            padding: 1rem 0 3rem;
         }
     }
 }

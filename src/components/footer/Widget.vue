@@ -5,12 +5,12 @@
             <div class="list">
                 <ul>
                     <li v-for="(element, index) in arrayExplore1">
-                        {{ index }} {{ element }}
+                        {{ element }}
                     </li>
                 </ul>
                 <ul>
                     <li v-for="(element, index) in arrayExplore2">
-                        {{ index }} {{ element }}
+                        {{ element }}
                     </li>
                 </ul>
             </div>
@@ -70,6 +70,11 @@ export default {
 
             ul {
                 width: calc(100% / 2);
+                padding-top: .5rem;
+
+                li {
+                    line-height: 2.3rem;
+                }
             }
         }
     }
@@ -77,6 +82,14 @@ export default {
     .explore,
     .information {
         width: calc(100% / 2);
+
+        ul {
+            padding-top: .5rem;
+
+            li {
+                line-height: 2.3rem;
+            }
+        }
     }
 }
 </style>
