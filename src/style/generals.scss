@@ -1,7 +1,30 @@
+@use './partilas/variables' as*;
+@use './partilas/maxins' as*;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@use './partilas/variables' as*;
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@font-face {
+    src: url(../src/font/Gilroy-Light.ttf);
+    font-family: "Gilroy";
+}
+
+header,
+main,
+footer {
+    font-family: "Gilroy";
+}
