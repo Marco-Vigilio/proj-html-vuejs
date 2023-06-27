@@ -6,7 +6,7 @@
                 <h1>Peace On Earth A Wonderful Wish But No Way</h1>
                 <p>Success isn’t overnight. It’s when everyday you get a little better than the day before. It all adds up.
                 </p>
-                <button>Get Started For Free <i class="fa-solid fa-arrow-right"></i></button>
+                <button>Get Started For Free <span><i class="fa-solid fa-arrow-right"></i></span></button>
             </div>
         </section>
         <section class="my_image">
@@ -21,6 +21,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
 .jumbotron {
     position: relative;
     display: flex;
@@ -54,6 +56,12 @@ export default {
             border: none;
             padding: 1rem 2rem;
             border-radius: .3rem;
+            background-color: $green;
+            color: white;
+
+            span {
+                margin-left: 1rem;
+            }
         }
     }
 

@@ -19,9 +19,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../style/partilas/variables' as*;
+
 header {
     position: relative;
     background-image: url("../assets/img/background-pattern-wavify.png");
+    background-color: $backGroundWaves;
     overflow: hidden;
 
     div.contain {
