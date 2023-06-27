@@ -24,6 +24,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
 div.numbers {
     display: flex;
     justify-content: space-between;
@@ -41,6 +43,7 @@ div.numbers {
         span {
             font-size: 2rem;
             padding-bottom: .5rem;
+            color: $green;
         }
     }
 }
