@@ -2,7 +2,7 @@
     <div class="jumbotron">
         <section>
             <span>REAL STORIES</span>
-            <div class="container">
+            <div class="carousel">
                 <p>{{ arrayTestimonial[indexTestimonial].story }}</p>
                 <div class="image">
                     <img :src="arrayTestimonial[indexTestimonial].image" alt="">
@@ -90,10 +90,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 div.jumbotron {
-    background-image: url("../assets/img/background-pattern-wavify.png");
-    background-color: gold;
+    background-image: url("../../../src/assets/img/background-pattern-wavify.png");
     display: flex;
     position: relative;
+    padding: 3rem 0;
 
     section {
         display: flex;
@@ -101,18 +101,20 @@ div.jumbotron {
         justify-content: center;
         align-items: center;
         width: calc(100% / 2);
-        border: 2px solid black;
 
-        .container {
+        .carousel {
             max-width: 500px;
-            background-color: violet;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding-top: 2rem;
 
-            p {
+            >p {
                 text-align: center;
+                font-size: 1.85rem;
+                line-height: 3rem;
+                padding-bottom: 2rem;
             }
 
             .image {
@@ -121,9 +123,20 @@ div.jumbotron {
                 border-radius: 50%;
                 overflow: hidden;
 
-
                 img {
                     width: 100%;
+                }
+            }
+
+            .person {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+
+                p {
+                    font-size: 1.3rem;
+                    padding-bottom: 1rem;
                 }
             }
         }
@@ -143,11 +156,15 @@ div.jumbotron {
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        background-color: aqua;
+        background-color: white;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        i {
+            font-size: 1.2rem;
+        }
     }
 }
 </style>
