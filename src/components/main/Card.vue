@@ -5,8 +5,8 @@
         </div>
         <div class="contain">
             <div class="main">
-                <span>&dollar;{{ priceNumber }}</span>
-                <span>.{{ priceNumberDecimal }}</span>
+                <span class="green">&dollar;{{ priceNumber }}</span>
+                <span class="green">.{{ priceNumberDecimal }}</span>
                 <p>{{ name }}</p>
             </div>
             <div class="footer">
@@ -56,6 +56,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
+span.green {
+    color: $green;
+}
+
 .card {
     width: (calc((100% - 4rem) / 3));
     border-radius: .4rem;

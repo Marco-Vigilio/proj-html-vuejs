@@ -2,14 +2,14 @@
     <section>
         <div class="title">
             <span>BEGIN YOUR JOURNEY AT MAXCOACH</span>
-            <h2>Latest Online Courses</h2>
+            <h2>Latest <span class="green">Online Courses</span></h2>
         </div>
         <div class="cards">
             <Card v-for="course in arrayCourses" :name=course.name :image=course.image :numLesson=course.numberLesson
                 :numStudents=course.students :priceNumber=course.price[0] :priceNumberDecimal=course.price[1] />
         </div>
         <div class="button">
-            <button class="button">Vedi tutti i corsi</button>
+            <button class="button">Vedi tutti i corsi<span><i class="fa-solid fa-arrow-right"></i></span></button>
         </div>
     </section>
 </template>
@@ -71,6 +71,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
+span.green {
+    color: $green;
+}
+
 section {
     padding: 6rem 0 3rem;
 
@@ -97,6 +103,16 @@ section {
         margin-top: 1rem;
         padding: 1rem 4rem;
         border-radius: .3rem;
+
+        button {
+            background-color: $green;
+            color: white;
+
+            span {
+                margin-left: 1rem;
+            }
+        }
+
     }
 }
 </style>
