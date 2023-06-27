@@ -39,6 +39,8 @@ export default {
         }
 
         h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
             font-size: 3rem;
             padding: 1.5rem 0;
             vertical-align: 60%;

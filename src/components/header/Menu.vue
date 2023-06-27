@@ -22,6 +22,7 @@ export default {
 @use '../../style/partilas/variables' as*;
 
 li {
+    font-weight: 600;
     margin: 0 1rem;
     border-bottom: 2px solid transparent;
     line-height: normal;

@@ -4,6 +4,9 @@
             <NavHeader />
             <JumbotronHeader />
         </div>
+        <div class="contain view">
+            <NavHeader />
+        </div>
         <img class="face" src="../assets/img/home-movation-shape-face.png" alt="image of face draw">
     </header>
 </template>
@@ -40,6 +43,8 @@ header {
         right: 0;
     }
 
-
+    .view {
+        background-color: white;
+    }
 }
 </style>
