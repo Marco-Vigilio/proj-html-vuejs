@@ -1,12 +1,13 @@
 <template>
     <section>
-        <span class="section">ABOUT ME</span>
+        <span class="section green">ABOUT ME</span>
         <div class="introduction">
             <article>
                 <h2>How to Be an Alpha Male: The 15 Habits of True Alphas</h2>
             </article>
             <article>
-                <p class="questions">Want to learn how to be an alpha male? How to be more masculine? How to be the man
+                <p class="questions">Want to learn how to be <span class="green">an alpha male</span>? How to be more
+                    masculine? How to be the man
                     you’ve always wanted
                     to be?</p>
                 <p class="goals">Your goal is to show the consistency of business, core values, and customer care.
@@ -42,6 +43,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
+span.green {
+    color: $green;
+}
+
 section {
     span.section {
         display: block;
