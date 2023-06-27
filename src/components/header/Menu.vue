@@ -36,11 +36,11 @@ li {
         border-bottom: 2px solid $green;
 
         a {
-            animation-name: example;
+            animation-name: slow;
             animation-duration: .3s;
             animation-fill-mode: forwards;
 
-            @keyframes example {
+            @keyframes slow {
                 0% {
                     color: black;
                 }
