@@ -19,11 +19,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
 li {
     margin: 0 1rem;
     border-bottom: 2px solid transparent;
     line-height: normal;
-
     vertical-align: text-top;
 
     i {
@@ -32,7 +33,26 @@ li {
     }
 
     &:hover {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid $green;
+
+        a {
+            animation-name: example;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+
+            @keyframes example {
+                0% {
+                    color: black;
+                }
+
+                100% {
+                    color: $green;
+                    ;
+                }
+            }
+        }
+
+
     }
 
 }
