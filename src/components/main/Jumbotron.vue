@@ -1,7 +1,7 @@
 <template >
     <div class="jumbotron">
         <section>
-            <span>REAL STORIES</span>
+            <span class="green">REAL STORIES</span>
             <div class="carousel">
                 <p>{{ arrayTestimonial[indexTestimonial].story }}</p>
                 <div class="image">
@@ -89,8 +89,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
+span.green {
+    color: $green;
+}
+
 div.jumbotron {
     background-image: url("../../../src/assets/img/background-pattern-wavify.png");
+    background-color: $backGroundWaves;
     display: flex;
     position: relative;
     padding: 3rem 0;
