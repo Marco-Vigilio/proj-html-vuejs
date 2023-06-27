@@ -3,15 +3,13 @@
         <section>
             <span>REAL STORIES</span>
             <div class="container">
-                <p>
-                    I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn
-                    from the syllabus. Great study portal for people like me.</p>
+                <p>{{ arrayTestimonial[indexTestimonial].story }}</p>
                 <div class="image">
-                    <img src="../../assets/img/testimonial-avata-02.jpg" alt="image of Mina Hollace">
+                    <img :src="arrayTestimonial[indexTestimonial].image" alt="">
                 </div>
                 <div class="person">
-                    <p>Mina Hollace</p>
-                    <span>/ Freelancer</span>
+                    <p>{{ arrayTestimonial[indexTestimonial].name }}</p>
+                    <span>{{ arrayTestimonial[indexTestimonial].work }}</span>
                 </div>
             </div>
         </section>
@@ -19,15 +17,75 @@
             <img src="../../assets/img/home-movation-testimonial-image.jpg" alt="image call">
         </section>
         <div class="scroll">
-            <div><i class="fa-solid fa-caret-up"></i></div>
-            <div>1/4</div>
-            <div><i class="fa-solid fa-caret-down"></i></div>
+            <div><i class="fa-solid fa-caret-up" @click="previewTestimonial"></i></div>
+            <div><span>{{ index }}</span>/4</div>
+            <div><i class="fa-solid fa-caret-down" @click="nextTestimonial"></i></div>
         </div>
     </div>
 </template>
 <script>
 export default {
     name: "Jumbotron",
+    data() {
+        return {
+            indexTestimonial: 0,
+            index: "",
+            arrayTestimonial: [
+                {
+                    name: "Mina Hollace",
+                    image: "../../../src/assets/img/testimonial-avata-02.jpg",
+                    work: "/ Freelancer",
+                    story: "I am free to learn at my own pace, follow my own schedule and choose the subject I want to lear from the syllabus. Great study portal for people like me",
+                },
+                {
+                    name: "Madley Pondor",
+                    image: "../../../src/assets/img/testimonial-avata-04.jpg",
+                    work: "/ IT Specialist",
+                    story: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.",
+                },
+                {
+                    name: "Luvic Dubble",
+                    image: "../../../src/assets/img/testimonial-avata-01.jpg",
+                    work: "/ Private Tutor",
+                    story: "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.",
+                },
+                {
+                    name: "Florence Themes",
+                    image: "../../../src/assets/img/testimonial-avata-03.jpg",
+                    work: "/ Multimedia Admin",
+                    story: "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.",
+                },
+            ],
+        }
+    },
+    methods: {
+        previewTestimonial() {
+            if (this.indexTestimonial <= 0) {
+                this.indexTestimonial = (this.arrayTestimonial.length - 1);
+            }
+            else {
+                this.indexTestimonial--;
+            }
+        },
+
+        nextTestimonial() {
+            if (this.indexTestimonial === (this.arrayTestimonial.length - 1)) {
+                this.indexTestimonial = 0;
+            }
+            else {
+                this.indexTestimonial++;
+            }
+        },
+        numberIndex() {
+            this.index = this.indexTestimonial + 1;
+        },
+    },
+    mounted() {
+        this.numberIndex();
+    },
+    updated() {
+        this.numberIndex();
+    },
 }
 </script>
 <style lang="scss" scoped>
