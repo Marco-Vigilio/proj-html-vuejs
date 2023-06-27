@@ -2,38 +2,47 @@
     <footer>
         <div class="contain">
             <div class="flex">
-                <section class="contact">
-                    <ul>
-                        <li>Contatti</li>
-                    </ul>
-                </section>
-                <section class="widget">
-                    <div class="explore">
-                        <h2>Explore</h2>
-                        <div class="list">
-                            <ul>
-                                <li>Qualcosa</li>
-                            </ul>
-                            <ul>
-                                <li>Qualcosa</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="information">
-                        <h2>information</h2>
-                        <ul>
-                            <li>Qualcosa</li>
-                        </ul>
-                    </div>
-                </section>
+                <Contact :objectAddress="objectContact" />
+                <Widget :arrayList="arrayWidget" />
             </div>
             <p>Copywrite</p>
         </div>
     </footer>
 </template>
 <script>
+import Contact from "./footer/Contact.vue";
+import Widget from "./footer/Widget.vue";
 export default {
+    components: {
+        Contact,
+        Widget,
+    },
+    data() {
+        return {
+            objectContact: {
+                where: "382 NE 191st St # 87394 Miami, FL 33179-3899",
+                when: {
+                    number: "+1 (305) 547-9909",
+                    hours: "9am - 5pm EST",
+                    days: "Monday - Friday",
+                },
+                email: "support@maxcoach.com",
+            },
 
+            arrayWidget: [
+                "Start here",
+                "Blog",
+                "About us",
+                "Success story",
+                "Courses",
+                "Contact us",
+                "Membership",
+                "Purchase guide",
+                "Privacy policy",
+                "Terms of service",
+            ]
+        }
+    },
 }
 </script>
 <style lang="scss" scoped>
@@ -51,23 +60,6 @@ footer {
                 background-color: red;
                 width: calc(100% / 2);
                 display: flex;
-            }
-
-            .widget {
-                .explore {
-                    div.list {
-                        display: flex;
-
-                        ul {
-                            width: calc(100% / 2);
-                        }
-                    }
-                }
-
-                .explore,
-                .information {
-                    width: calc(100% / 2);
-                }
             }
         }
 
