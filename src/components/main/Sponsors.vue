@@ -40,6 +40,26 @@ export default {
         img {
             width: 60%;
             object-fit: contain;
+            filter: grayscale(70%);
+            opacity: 40%;
+
+            &:hover {
+                animation-name: slow;
+                animation-duration: .3s;
+                animation-fill-mode: forwards;
+
+                @keyframes slow {
+                    0% {
+                        filter: grayscale(70%);
+                        opacity: 40%;
+                    }
+
+                    100% {
+                        filter: grayscale(0%);
+                        opacity: 100%;
+                    }
+                }
+            }
         }
     }
 }
