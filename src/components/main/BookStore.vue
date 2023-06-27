@@ -2,12 +2,12 @@
     <section>
         <div class="about_store">
             <span>BOOK STORE ONLINE</span>
-            <h2>Be Alpha With Wingman's Book</h2>
+            <h2>Be Alpha With <span class="green">Wingman's Book</span></h2>
             <ul>
-                <li><i class="fa-solid fa-check"></i>Help you understand yourself better</li>
-                <li><i class="fa-solid fa-check"></i>Revealing mature tips</li>
-                <li><i class="fa-solid fa-check"></i>Give the right advice</li>
-                <li><i class="fa-solid fa-check"></i>Fascinating examples of alpha man</li>
+                <li><span class="green"><i class="fa-solid fa-check"></i></span>Help you understand yourself better</li>
+                <li><span class="green"><i class="fa-solid fa-check"></i></span>Revealing mature tips</li>
+                <li><span class="green"><i class="fa-solid fa-check"></i></span>Give the right advice</li>
+                <li><span class="green"><i class="fa-solid fa-check"></i></span>Fascinating examples of alpha man</li>
             </ul>
             <button>Get Free Ebook</button>
         </div>
@@ -18,7 +18,8 @@
                 </div>
                 <div class="info">
                     <p>Alpha man by Maxcoach</p>
-                    <span class="big_num">29</span><span>.00</span><span class="big_num">&dollar;</span>
+                    <span class="big_num green">29</span><span class="green">.00</span><span
+                        class="big_num green">&dollar;</span>
                 </div>
             </div>
             <div class="book">
@@ -27,7 +28,8 @@
                 </div>
                 <div class="info">
                     <p>Real man 4.0 by Maxcoach</p>
-                    <span class="big_num">39</span><span>.00</span><span class="big_num">&dollar;</span>
+                    <span class="big_num green">39</span><span class="green">.00</span><span
+                        class="big_num green">&dollar;</span>
                 </div>
             </div>
         </div>
@@ -39,6 +41,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
+span.green {
+    color: $green;
+}
+
 section {
     display: flex;
     padding: 2rem 0 1rem;
@@ -69,6 +77,8 @@ section {
             margin-top: 1rem;
             padding: 1rem 4rem;
             border-radius: 0.3rem;
+            background-color: $green;
+            color: white;
         }
     }
 
