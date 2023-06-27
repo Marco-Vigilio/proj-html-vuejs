@@ -46,8 +46,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../style/partilas/variables' as*;
+
 footer {
-    background-color: rgb(72, 72, 72);
+    background-color: #3F3A64;
+    color: white;
 
     div.contain {
         max-width: 1170px;
@@ -66,6 +69,7 @@ footer {
         p {
             text-align: center;
             padding: 1rem 0 3rem;
+            color: $gray;
         }
     }
 }

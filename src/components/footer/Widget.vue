@@ -63,6 +63,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+
 .widget {
     .explore {
         div.list {
@@ -74,6 +76,23 @@ export default {
 
                 li {
                     line-height: 2.3rem;
+                    color: $gray;
+
+                    &:hover {
+                        animation-name: slow;
+                        animation-duration: .3s;
+                        animation-fill-mode: forwards;
+
+                        @keyframes slow {
+                            0% {
+                                color: $gray;
+                            }
+
+                            100% {
+                                color: $green;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -88,6 +107,23 @@ export default {
 
             li {
                 line-height: 2.3rem;
+                color: $gray;
+
+                &:hover {
+                    animation-name: slow;
+                    animation-duration: .3s;
+                    animation-fill-mode: forwards;
+
+                    @keyframes slow {
+                        0% {
+                            color: $gray;
+                        }
+
+                        100% {
+                            color: $green;
+                        }
+                    }
+                }
             }
         }
     }
