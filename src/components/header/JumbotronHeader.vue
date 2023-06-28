@@ -22,6 +22,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
 
 .jumbotron {
     position: relative;
@@ -39,15 +40,6 @@ export default {
             font-weight: 600;
         }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 3rem;
-            padding: 1.5rem 0;
-            vertical-align: 60%;
-            line-height: 4rem;
-        }
-
         p {
             padding-bottom: 1.5rem;
             vertical-align: 60%;
@@ -62,23 +54,7 @@ export default {
             color: white;
             cursor: pointer;
             font-weight: 700;
-
-            &:hover {
-                background-color: $dark;
-                animation-name: slow;
-                animation-duration: .3s;
-                animation-fill-mode: ease-in-out;
-            }
-
-            @keyframes slow {
-                0% {
-                    background-color: $green;
-                }
-
-                100% {
-                    background-color: $dark;
-                }
-            }
+            @include changeBgColor;
 
             span {
                 margin-left: 1rem;

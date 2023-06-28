@@ -4,3 +4,19 @@
     color: $green;
 
 }
+
+@mixin scale {
+    transition: 1s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@mixin changeBgColor {
+    transition: .3s;
+
+    &:hover {
+        background-color: $dark;
+    }
+}

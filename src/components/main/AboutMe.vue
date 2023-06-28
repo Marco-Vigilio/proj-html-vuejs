@@ -19,7 +19,8 @@
         <div class="about">
             <article class="video">
                 <a href="#">
-                    <img src="../../assets/img/home-movation-video-poster-670x450.jpg" alt="image video of Theme Move">
+                    <img id="video_youtube" src="../../assets/img/home-movation-video-poster-670x450.jpg"
+                        alt="image video of Theme Move">
                     <img class="youtube_icon" src="../../assets/img/icon-youtube-play.png" alt="image icon Youtube">
                 </a>
             </article>
@@ -44,6 +45,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
 
 span.green {
     color: $green;
@@ -52,7 +54,10 @@ span.green {
 section {
     span.section {
         display: block;
-        padding-bottom: 2.5rem;
+        padding: 2rem 0 .5rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+
     }
 
     .introduction {
@@ -64,6 +69,7 @@ section {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
 
             h2 {
                 font-size: 2.5rem;
@@ -72,15 +78,15 @@ section {
         }
 
         .questions {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             padding-bottom: 1rem;
             line-height: 2rem;
         }
 
         .goals {
-            font-size: 1.05rem;
-            line-height: 1.5rem;
+            font-size: .95rem;
+            line-height: 1.6rem;
         }
     }
 
@@ -92,11 +98,16 @@ section {
             position: relative;
             display: flex;
             width: 57%;
+            border-radius: .4rem;
+            overflow: hidden;
+
+            #video_youtube {
+                @include scale;
+            }
 
             img {
                 width: 100%;
                 display: block;
-                border-radius: .4rem;
             }
 
             .youtube_icon {
