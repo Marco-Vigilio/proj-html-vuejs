@@ -18,7 +18,7 @@
         </section>
         <div class="scroll">
             <div><i class="fa-solid fa-caret-up" @click="previewTestimonial"></i></div>
-            <div><span>{{ index }}</span>/4</div>
+            <div id="number"><span>{{ index }}</span>/4</div>
             <div><i class="fa-solid fa-caret-down" @click="nextTestimonial"></i></div>
         </div>
     </div>
@@ -90,9 +90,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 @use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
 
 span.green {
     color: $green;
+    @include subTitle;
 }
 
 div.jumbotron {
@@ -119,7 +121,8 @@ div.jumbotron {
 
             >p {
                 text-align: center;
-                font-size: 1.85rem;
+                font-size: 1.6rem;
+                font-weight: 600;
                 line-height: 3rem;
                 padding-bottom: 2rem;
             }
@@ -139,11 +142,18 @@ div.jumbotron {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
                 padding-top: 2rem;
 
                 p {
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    letter-spacing: .1rem;
                     padding-bottom: 1rem;
+                }
+
+                span {
+                    font-size: .9rem;
                 }
             }
         }
@@ -169,8 +179,14 @@ div.jumbotron {
         left: 50%;
         transform: translate(-50%, -50%);
 
+        #number {
+            font-weight: 600;
+            letter-spacing: .1rem;
+        }
+
         i {
             font-size: 1.2rem;
+            color: #d5d5d5;
         }
     }
 }
