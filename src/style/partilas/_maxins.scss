@@ -16,6 +16,7 @@
 @mixin changeBgColor {
     cursor: pointer;
     transition: .3s;
+    font-weight: 700;
 
     &:hover {
         background-color: $dark;
