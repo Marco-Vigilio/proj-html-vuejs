@@ -52,8 +52,6 @@ export default {
             border-radius: .3rem;
             background-color: $green;
             color: white;
-            cursor: pointer;
-            font-weight: 700;
             @include changeBgColor;
 
             span {
