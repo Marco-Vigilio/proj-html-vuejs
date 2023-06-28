@@ -37,7 +37,7 @@ export default {
 
         span {
             text-transform: uppercase;
-            font-weight: 600;
+            @include subTitle;
         }
 
         p {

@@ -55,8 +55,7 @@ section {
     span.section {
         display: block;
         padding: 2rem 0 .5rem;
-        font-weight: 600;
-        letter-spacing: .1rem;
+        @include subTitle;
 
     }
 
