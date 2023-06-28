@@ -63,11 +63,7 @@ export default {
             font-weight: 600;
 
             a {
-                transition: .4s;
-
-                &:hover {
-                    color: $green;
-                }
+                @include changeBgColorGreen;
             }
         }
     }
