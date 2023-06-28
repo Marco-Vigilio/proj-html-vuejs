@@ -17,6 +17,44 @@
             <div class="book">
                 <div class="image_book">
                     <img src="../../assets/img/product-book-11-400x400.jpg" alt="image of my book">
+                    <div class="icon">
+                        <div class="flex">
+                            <div class="function" v-if="showif === true">
+                                Quick view
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="function" v-if="showif === true">
+                                Add to cart
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="function" v-if="showif === true">
+                                Add to wishlist
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="function" v-if="showif">
+                                Compare
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-solid fa-signal"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="info">
                     <p><a href="#">Alpha man by Maxcoach</a></p>
@@ -27,6 +65,44 @@
             <div class="book">
                 <div class="image_book">
                     <img src="../../assets/img/product-book-10-400x400.jpg" alt="image of my book">
+                    <div class="icon">
+                        <div class="flex">
+                            <div class="function" v-if="showif === true">
+                                Quick view
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="function" v-if="showif === true">
+                                Add to cart
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="function" v-if="showif === true">
+                                Add to wishlist
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="function" v-if="showif">
+                                Compare
+                            </div>
+                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                                <link rel="stylesheet" href="#">
+                                <i class="fa-solid fa-signal"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="info">
                     <p><a href="#">Real man 4.0 by Maxcoach</a></p>
@@ -54,8 +130,17 @@ export default {
                     price: ["39", "00"],
                 },
             ],
+            showif: false,
         }
-    }
+    },
+    methods: {
+        show(index) {
+            this.showif = true;
+        },
+        notShow() {
+            this.showif = false;
+        }
+    },
 }
 </script>
 <style lang="scss" scoped>
@@ -123,12 +208,63 @@ section {
             transform: scale(1.1);
         }
 
+        .book .image_book div.icon {
+            display: none;
+            transition: 1s;
+            padding: 0 1.3rem;
+        }
+
+        .book:hover .image_book div.icon {
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100%;
+
+            .flex {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .function {
+                    display: none;
+                    background-color: $green;
+                    color: white;
+                    margin-right: .5rem;
+                    padding: .3rem .5rem;
+                    border-radius: .3rem;
+                }
+
+                .circle {
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: .5rem 0;
+
+                    &:hover {
+                        @include changeBgColor($green)
+                    }
+                }
+            }
+
+
+        }
+
         .book {
             width: calc(100% / 2);
 
             .image_book {
                 width: 100%;
                 overflow: hidden;
+                display: flex;
+                position: relative;
+
 
                 img {
                     width: 100%;

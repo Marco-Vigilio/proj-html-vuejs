@@ -13,13 +13,13 @@
     }
 }
 
-@mixin changeBgColor {
+@mixin changeBgColor($bgcolor: $dark) {
     cursor: pointer;
     transition: .3s;
     font-weight: 700;
 
     &:hover {
-        background-color: $dark;
+        background-color: $bgcolor;
     }
 }
 
@@ -51,4 +51,8 @@
     font-size: $fontSizeSubTitleFooter;
     font-family: "Gilroy";
     padding: 0;
+}
+
+@mixin flex() {
+    display: flex;
 }
