@@ -103,6 +103,7 @@ div.jumbotron {
     display: flex;
     position: relative;
     padding: 3rem 0;
+    margin-bottom: 6rem;
 
     section {
         display: flex;

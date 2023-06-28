@@ -1,11 +1,13 @@
 <template>
     <div class="blog">
-        <div class="image">
-            <img :src="image" alt="image of work">
-        </div>
+        <a href="#">
+            <div class="image">
+                <img :src="image" alt="image of work">
+            </div>
+        </a>
         <div class="info_blog">
-            <span><i class="fa-regular fa-calendar"></i> {{ data }}</span>
-            <p>{{ title }}</p>
+            <span class="when"><i class="fa-regular fa-calendar"></i> {{ data }}</span>
+            <p><a href="#">{{ title }}</a></p>
             <span>{{ description }}</span>
         </div>
     </div>
@@ -22,9 +24,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 @use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
+
+.blog img {
+    transition: 1s;
+}
+
+.blog:hover img {
+    transform: scale(1.1);
+}
 
 .blog {
-    width: (calc((100% - 4rem) / 4));
+    width: (calc((100% - 8rem) / 4));
 
     .image {
         width: 100%;
@@ -33,39 +44,31 @@ export default {
 
         img {
             width: 100%;
+            display: block;
         }
     }
 
     .info_blog {
         padding: 1.5rem 0 2rem;
 
-        p {
-            font-size: 1.4rem;
-            padding: 1rem 0;
-            line-height: 2rem;
-            color: black;
-
-
-            &:hover {
-                animation-name: slow;
-                animation-duration: .3s;
-                animation-fill-mode: forwards;
-
-                @keyframes slow {
-                    0% {
-                        color: black;
-                    }
-
-                    100% {
-                        color: $green;
-                        ;
-                    }
-                }
-            }
+        span.when {
+            color: gray;
+            font-size: .9rem;
         }
 
-        span {
-            font-size: 1rem;
+        p {
+            font-size: 1.3rem;
+            padding: 1rem 0;
+            line-height: 2rem;
+            font-weight: 600;
+
+            a {
+                transition: .4s;
+
+                &:hover {
+                    color: $green;
+                }
+            }
         }
     }
 }
