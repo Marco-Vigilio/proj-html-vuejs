@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="title">
-            <span>BEGIN YOUR JOURNEY AT MAXCOACH</span>
+            <span class="subtitle">BEGIN YOUR JOURNEY AT MAXCOACH</span>
             <h2>Latest <span class="green">Online Courses</span></h2>
         </div>
         <div class="cards">
@@ -85,8 +85,9 @@ section {
         text-align: center;
         padding-bottom: 2rem;
 
-        span {
+        span.subtitle {
             @include subTitle;
+            color: $gray;
         }
 
         h2 {
