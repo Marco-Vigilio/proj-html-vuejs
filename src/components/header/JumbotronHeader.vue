@@ -36,6 +36,7 @@ export default {
 
         span {
             text-transform: uppercase;
+            font-weight: 600;
         }
 
         h1 {
@@ -48,7 +49,6 @@ export default {
         }
 
         p {
-            font-size: 1.1rem;
             padding-bottom: 1.5rem;
             vertical-align: 60%;
             line-height: 1.8rem;
@@ -60,6 +60,25 @@ export default {
             border-radius: .3rem;
             background-color: $green;
             color: white;
+            cursor: pointer;
+            font-weight: 700;
+
+            &:hover {
+                background-color: $dark;
+                animation-name: slow;
+                animation-duration: .3s;
+                animation-fill-mode: ease-in-out;
+            }
+
+            @keyframes slow {
+                0% {
+                    background-color: $green;
+                }
+
+                100% {
+                    background-color: $dark;
+                }
+            }
 
             span {
                 margin-left: 1rem;
