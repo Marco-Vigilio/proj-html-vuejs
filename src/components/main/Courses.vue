@@ -9,7 +9,9 @@
                 :numStudents=course.students :priceNumber=course.price[0] :priceNumberDecimal=course.price[1] />
         </div>
         <div class="button">
-            <button class="button">View all courses<span><i class="fa-solid fa-arrow-right"></i></span></button>
+            <button class="button">
+                <link rel="stylesheet" href="#"> View all courses<span><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
         </div>
     </section>
 </template>

@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="about_store">
-            <span>BOOK STORE ONLINE</span>
+            <span class="subtitle">BOOK STORE ONLINE</span>
             <h2>Be Alpha With <span class="green">Wingman's Book</span></h2>
             <ul>
                 <li><span class="green"><i class="fa-solid fa-check"></i></span>Help you understand yourself better</li>
@@ -9,7 +9,9 @@
                 <li><span class="green"><i class="fa-solid fa-check"></i></span>Give the right advice</li>
                 <li><span class="green"><i class="fa-solid fa-check"></i></span>Fascinating examples of alpha man</li>
             </ul>
-            <button>Get Free Ebook</button>
+            <button>
+                <link rel="stylesheet" href="#"> Get Free Ebook
+            </button>
         </div>
         <div class="books">
             <div class="book">
@@ -17,7 +19,7 @@
                     <img src="../../assets/img/product-book-11-400x400.jpg" alt="image of my book">
                 </div>
                 <div class="info">
-                    <p>Alpha man by Maxcoach</p>
+                    <p><a href="#">Alpha man by Maxcoach</a></p>
                     <span class="big_num green">29</span><span class="green">.00</span><span
                         class="big_num green">&dollar;</span>
                 </div>
@@ -27,7 +29,7 @@
                     <img src="../../assets/img/product-book-10-400x400.jpg" alt="image of my book">
                 </div>
                 <div class="info">
-                    <p>Real man 4.0 by Maxcoach</p>
+                    <p><a href="#">Real man 4.0 by Maxcoach</a></p>
                     <span class="big_num green">39</span><span class="green">.00</span><span
                         class="big_num green">&dollar;</span>
                 </div>
@@ -38,10 +40,27 @@
 <script>
 export default {
     name: "Book Store",
+    data() {
+        return {
+            books: [
+                {
+                    title: "Alpha man by Maxcoach",
+                    image: "../../../src/assets/img/product-book-11-400x400.jpg",
+                    price: ["29", "00"],
+                },
+                {
+                    title: "Real man 4.0 by Maxcoach",
+                    image: "../../../src/assets/img/product-book-10-400x400.jpg",
+                    price: ["39", "00"],
+                },
+            ],
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
 @use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
 
 span.green {
     color: $green;
@@ -50,6 +69,11 @@ span.green {
 section {
     display: flex;
     padding: 2rem 0 1rem;
+
+    span.subtitle {
+        display: block;
+        @include subTitle;
+    }
 
     .about_store {
         width: 40%;
@@ -79,6 +103,7 @@ section {
             border-radius: 0.3rem;
             background-color: $green;
             color: white;
+            @include changeBgColor;
         }
     }
 
@@ -90,14 +115,24 @@ section {
             margin: 0 2rem;
         }
 
+        .book .image_book img {
+            transition: 1s;
+        }
+
+        .book:hover .image_book img {
+            transform: scale(1.1);
+        }
+
         .book {
             width: calc(100% / 2);
 
             .image_book {
                 width: 100%;
+                overflow: hidden;
 
                 img {
                     width: 100%;
+                    display: block;
                 }
             }
 
@@ -107,6 +142,15 @@ section {
                 p {
                     font-size: 1.4rem;
                     padding: 1rem 0;
+                    font-weight: bold;
+
+                    a {
+                        @include changeBgColorGreen;
+                    }
+                }
+
+                span {
+                    font-weight: 600;
                 }
             }
 

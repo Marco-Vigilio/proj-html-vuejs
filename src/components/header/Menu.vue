@@ -1,10 +1,14 @@
 <template>
-    <div class="menu">
-        <ul>
-            <li>
-                <a href="#">{{ name }} <i class="fa-solid fa-chevron-down"></i></a>
-            </li>
-        </ul>
+    <div>
+        <div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#">{{ name }} <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -34,9 +38,11 @@ li {
     }
 
     &:hover {
-        border-bottom: 2px solid $green;
+
 
         a {
+            border-bottom: 2px solid $green;
+            padding-bottom: .2rem;
             animation-name: slow;
             animation-duration: .3s;
             animation-fill-mode: forwards;
@@ -52,8 +58,6 @@ li {
                 }
             }
         }
-
-
     }
 
 }

@@ -1,11 +1,14 @@
 <template>
     <header>
+        <div class="view">
+            <div class="contain">
+                <NavHeader />
+            </div>
+        </div>
+
         <div class="contain">
             <NavHeader />
             <JumbotronHeader />
-        </div>
-        <div class="contain view">
-            <NavHeader />
         </div>
         <img class="face" src="../assets/img/home-movation-shape-face.png" alt="image of face draw">
     </header>
@@ -18,7 +21,11 @@ export default {
     components: {
         NavHeader,
         JumbotronHeader,
-    }
+    },
+    data() {
+        return {
+        }
+    },
 }
 </script>
 <style lang="scss" scoped>
@@ -29,6 +36,15 @@ header {
     background-image: url("../assets/img/background-pattern-wavify.png");
     background-color: $backGroundWaves;
     overflow: hidden;
+
+    div.view {
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        display: none;
+    }
 
     div.contain {
         max-width: 1170px;
@@ -41,10 +57,6 @@ header {
         width: 40%;
         top: 18rem;
         right: 0;
-    }
-
-    .view {
-        background-color: white;
     }
 }
 </style>

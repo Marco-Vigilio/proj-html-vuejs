@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="image_logo">
-            <img src="../../assets/img/dark-logo.png" alt="">
+            <img src="../../assets/img/dark-logo.png" alt="Logo MaxChoach">
         </div>
 
 

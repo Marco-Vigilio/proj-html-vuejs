@@ -8,7 +8,7 @@
                 <div class="main">
                     <span class="green">&dollar;{{ priceNumber }}</span>
                     <span class="green">.{{ priceNumberDecimal }}</span>
-                    <p>{{ name }}</p>
+                    <p><a href="#">{{ name }}</a></p>
                 </div>
                 <div class="footer">
                     <span v-if="numLesson === 1">
@@ -101,7 +101,11 @@ span.green {
             padding: 1rem 0;
             line-height: 2rem;
             font-weight: bold;
-            @include changeBgColorGreen;
+
+            a {
+                @include changeBgColorGreen;
+            }
+
         }
     }
 
