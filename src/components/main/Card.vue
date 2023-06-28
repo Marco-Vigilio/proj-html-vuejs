@@ -75,12 +75,6 @@ span.green {
     .header {
         width: 100%;
         overflow: hidden;
-        /*
-        img {
-            transition: 1s;
-            transform: scale(1.1);
-        }
-*/
     }
 
 
@@ -107,6 +101,7 @@ span.green {
             padding: 1rem 0;
             line-height: 2rem;
             font-weight: bold;
+            @include changeBgColorGreen;
         }
     }
 
