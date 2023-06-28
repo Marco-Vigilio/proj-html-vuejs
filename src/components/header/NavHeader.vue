@@ -13,10 +13,18 @@
 
         <div class="social">
             <ul>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <div>twitter</div>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <div>facebook</div>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <div>instagram</div>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <div>linkedin</div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -56,6 +64,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -84,12 +95,36 @@ nav {
             display: flex;
 
             li {
+                position: relative;
                 padding-left: 1.5rem;
 
-                i {
-                    font-size: 1.1rem;
+                a {
+
+                    i {
+                        font-size: 1.1rem;
+                        @include changeBgColorGreen;
+                    }
+                }
+
+                div {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    font-weight: 600;
+                    padding: .5rem;
+                    margin-top: .5rem;
+                    background-color: black;
+                    color: white;
+                    border-radius: .3rem;
+                }
+
+                a:hover+div {
+
+                    display: block;
                 }
             }
+
+
         }
     }
 }
