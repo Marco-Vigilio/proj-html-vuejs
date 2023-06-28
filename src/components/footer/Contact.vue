@@ -27,10 +27,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 @use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
 
 .contact {
     display: flex;
     flex-direction: column;
+
+    h2 {
+        @include subTitleFooter;
+    }
 
     .list li {
         line-height: 2.3rem;
@@ -41,22 +46,7 @@ export default {
     #email {
         a {
             color: $gray;
-
-            &:hover {
-                animation-name: slowEmail;
-                animation-duration: .3s;
-                animation-fill-mode: forwards;
-
-                @keyframes slowEmail {
-                    0% {
-                        color: $gray;
-                    }
-
-                    100% {
-                        color: $green;
-                    }
-                }
-            }
+            @include changeBgColorGreen;
         }
 
     }
@@ -69,23 +59,10 @@ export default {
             font-size: 1.5rem;
             margin-right: 1.8rem;
             color: $gray;
+            transition: .3s;
 
             &:hover {
-                animation-name: slow;
-                animation-duration: .3s;
-                animation-fill-mode: forwards;
-
-                @keyframes slow {
-                    0% {
-                        color: $gray;
-                    }
-
-                    100% {
-                        color: white;
-                        ;
-                        ;
-                    }
-                }
+                color: white;
             }
         }
     }

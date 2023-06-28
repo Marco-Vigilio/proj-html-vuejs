@@ -49,7 +49,7 @@ export default {
 @use '../style/partilas/variables' as*;
 
 footer {
-    background-color: #3F3A64;
+    background-color: #171621;
     color: white;
 
     div.contain {

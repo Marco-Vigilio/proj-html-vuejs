@@ -22,6 +22,16 @@
     }
 }
 
+@mixin changeBgColorGreen {
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        color: $green;
+    }
+}
+
+
 @mixin shadow {
     transition: .4s;
 
@@ -34,4 +44,10 @@
     font-weight: 600;
     letter-spacing: 0.1rem;
     font-size: .9rem;
+}
+
+@mixin subTitleFooter {
+    font-size: $fontSizeSubTitleFooter;
+    font-family: "Gilroy";
+    padding: 0;
 }

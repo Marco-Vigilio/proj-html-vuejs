@@ -5,12 +5,12 @@
             <div class="list">
                 <ul>
                     <li v-for="(element, index) in arrayExplore1">
-                        {{ element }}
+                        <a href="#">{{ element }}</a>
                     </li>
                 </ul>
                 <ul>
                     <li v-for="(element, index) in arrayExplore2">
-                        {{ element }}
+                        <a href="#">{{ element }}</a>
                     </li>
                 </ul>
             </div>
@@ -19,7 +19,7 @@
             <h2>information</h2>
             <ul>
                 <li v-for="(element, index) in arrayInformation">
-                    {{ element }}
+                    <a href="#">{{ element }}</a>
                 </li>
             </ul>
         </div>
@@ -64,6 +64,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @use '../../style/partilas/variables' as*;
+@use '../../style/partilas/maxins' as*;
 
 .widget {
     .explore {
@@ -76,23 +77,12 @@ export default {
 
                 li {
                     line-height: 2.3rem;
-                    color: $gray;
 
-                    &:hover {
-                        animation-name: slow;
-                        animation-duration: .3s;
-                        animation-fill-mode: forwards;
-
-                        @keyframes slow {
-                            0% {
-                                color: $gray;
-                            }
-
-                            100% {
-                                color: $green;
-                            }
-                        }
+                    a {
+                        color: $gray;
+                        @include changeBgColorGreen;
                     }
+
                 }
             }
         }
@@ -102,28 +92,22 @@ export default {
     .information {
         width: calc(100% / 2);
 
+        h2 {
+            @include subTitleFooter;
+        }
+
         ul {
             padding-top: .5rem;
 
             li {
                 line-height: 2.3rem;
-                color: $gray;
 
-                &:hover {
-                    animation-name: slow;
-                    animation-duration: .3s;
-                    animation-fill-mode: forwards;
 
-                    @keyframes slow {
-                        0% {
-                            color: $gray;
-                        }
-
-                        100% {
-                            color: $green;
-                        }
-                    }
+                a {
+                    color: $gray;
+                    @include changeBgColorGreen;
                 }
+
             }
         }
     }
