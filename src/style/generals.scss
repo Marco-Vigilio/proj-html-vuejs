@@ -23,8 +23,24 @@ a {
     font-family: "Gilroy";
 }
 
+@font-face {
+    src: url(../../src/font/Gilroy-ExtraBold.ttf);
+    font-family: "Gilroy-bold";
+}
+
 header,
 main,
 footer {
     font-family: "Gilroy";
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 3rem;
+    padding: 1.5rem 0;
+    vertical-align: 60%;
+    line-height: 4rem;
 }
