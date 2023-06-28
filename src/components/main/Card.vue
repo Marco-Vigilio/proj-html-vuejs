@@ -63,6 +63,7 @@ export default {
 
 span.green {
     color: $green;
+    font-weight: bolder;
 }
 
 .card {
@@ -102,8 +103,10 @@ span.green {
         }
 
         p {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             padding: 1rem 0;
+            line-height: 2rem;
+            font-weight: bold;
         }
     }
 
