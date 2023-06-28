@@ -42,23 +42,11 @@ export default {
             object-fit: contain;
             filter: grayscale(70%);
             opacity: 40%;
+            transition: .4s;
 
             &:hover {
-                animation-name: slow;
-                animation-duration: .3s;
-                animation-fill-mode: forwards;
-
-                @keyframes slow {
-                    0% {
-                        filter: grayscale(70%);
-                        opacity: 40%;
-                    }
-
-                    100% {
-                        filter: grayscale(0%);
-                        opacity: 100%;
-                    }
-                }
+                filter: grayscale(0%);
+                opacity: 100%;
             }
         }
     }
