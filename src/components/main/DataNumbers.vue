@@ -41,9 +41,15 @@ div.numbers {
         align-items: center;
 
         span {
-            font-size: 2rem;
+            font-size: 2.5rem;
             padding-bottom: .5rem;
             color: $green;
+            font-weight: 900;
+        }
+
+        p {
+            font-weight: 600;
+            letter-spacing: .1rem;
         }
     }
 }
