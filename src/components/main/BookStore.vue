@@ -19,39 +19,39 @@
                     <img src="../../assets/img/product-book-11-400x400.jpg" alt="image of my book">
                     <div class="icon">
                         <div class="flex">
-                            <div class="function" v-if="showif === true">
-                                Quick view
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
+                            <div class="function">
+                                Quick view
+                            </div>
                         </div>
                         <div class="flex">
-                            <div class="function" v-if="showif === true">
-                                Add to cart
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
+                            <div class="function">
+                                Add to cart
+                            </div>
                         </div>
                         <div class="flex">
-                            <div class="function" v-if="showif === true">
-                                Add to wishlist
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
+                            <div class="function">
+                                Add to wishlist
+                            </div>
                         </div>
                         <div class="flex">
-                            <div class="function" v-if="showif">
-                                Compare
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-solid fa-signal"></i>
+                            </div>
+                            <div class="function">
+                                Compare
                             </div>
                         </div>
                     </div>
@@ -67,39 +67,39 @@
                     <img src="../../assets/img/product-book-10-400x400.jpg" alt="image of my book">
                     <div class="icon">
                         <div class="flex">
-                            <div class="function" v-if="showif === true">
-                                Quick view
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
+                            <div class="function">
+                                Quick view
+                            </div>
                         </div>
                         <div class="flex">
-                            <div class="function" v-if="showif === true">
-                                Add to cart
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
+                            <div class="function">
+                                Add to cart
+                            </div>
                         </div>
                         <div class="flex">
-                            <div class="function" v-if="showif === true">
-                                Add to wishlist
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
+                            <div class="function">
+                                Add to wishlist
+                            </div>
                         </div>
                         <div class="flex">
-                            <div class="function" v-if="showif">
-                                Compare
-                            </div>
-                            <div class="circle" @mouseover="show()" @mouseout="notShow()">
+                            <div class="circle">
                                 <link rel="stylesheet" href="#">
                                 <i class="fa-solid fa-signal"></i>
+                            </div>
+                            <div class="function">
+                                Compare
                             </div>
                         </div>
                     </div>
@@ -116,31 +116,6 @@
 <script>
 export default {
     name: "Book Store",
-    data() {
-        return {
-            books: [
-                {
-                    title: "Alpha man by Maxcoach",
-                    image: "../../../src/assets/img/product-book-11-400x400.jpg",
-                    price: ["29", "00"],
-                },
-                {
-                    title: "Real man 4.0 by Maxcoach",
-                    image: "../../../src/assets/img/product-book-10-400x400.jpg",
-                    price: ["39", "00"],
-                },
-            ],
-            showif: false,
-        }
-    },
-    methods: {
-        show(index) {
-            this.showif = true;
-        },
-        notShow() {
-            this.showif = false;
-        }
-    },
 }
 </script>
 <style lang="scss" scoped>
@@ -225,7 +200,7 @@ section {
 
             .flex {
                 display: flex;
-                flex-direction: row;
+                flex-direction: row-reverse;
                 align-items: center;
 
                 .function {
@@ -248,8 +223,13 @@ section {
                     margin: .5rem 0;
 
                     &:hover {
-                        @include changeBgColor($green)
+                        @include changeBgColor($green);
+
                     }
+                }
+
+                .circle:hover+.function {
+                    display: block;
                 }
             }
 
